@@ -1,4 +1,5 @@
-dbt_first_project:
+
+ dbt_first_project:
   outputs:
     dev:
       catalog: dbt_practice_dev
@@ -6,6 +7,6 @@ dbt_first_project:
       http_path: /sql/1.0/warehouses/76d9a299b3a357b8
       schema: default
       threads: 1
-      token: dapi4f1c0b102d08d6b2a8950e8091502f38
+      token: "{{ env_var('DBT_DATABRICKS_TOKEN') }}"
       type: databricks
   target: dev
