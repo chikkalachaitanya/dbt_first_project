@@ -9,4 +9,13 @@
       threads: 1
       token: "{{ env_var('DBT_DATABRICKS_TOKEN') }}"
       type: databricks
+    
+    prod:
+      catalog: dbt_practice_prod
+      host: dbc-ab3877d6-a56d.cloud.databricks.com
+      http_path: /sql/1.0/warehouses/76d9a299b3a357b8
+      schema: default
+      threads: 1
+      token: "{{ env_var('DBT_DATABRICKS_TOKEN') }}"
+      type: databricks 
   target: dev
